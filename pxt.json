@@ -1,0 +1,22 @@
+{
+    "name": "Scorebord Zender",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "touchbit": "github:pimoroni/pxt-touchbit#v0.0.1",
+        "pxt-kitronik-viewtext32": "github:kitronikltd/pxt-kitronik-viewtext32#v1.0.4"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
