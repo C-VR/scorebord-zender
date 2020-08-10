@@ -135,29 +135,15 @@ input.onButtonPressed(Button.B, function () {
     radio.sendValue("totScore", totScore4)
     basic.pause(200)
     radio.setGroup(gever)
+    basic.pause(200)
     radio.sendValue("gever", 1)
     basic.pause(200)
     radio.setGroup(255)
-    basic.pause(500)
-    radio.sendString("" + speler1 + ": " + totScore1)
     basic.pause(200)
-    radio.sendString("" + speler2 + ": " + totScore2)
+    radio.sendString("" + speler1.charAt(0) + ":" + totScore1 + ("/" + speler2.charAt(0) + ":") + totScore2 + "/")
     basic.pause(200)
-    radio.sendString("" + speler3 + ": " + totScore3)
+    radio.sendString("" + speler3.charAt(0) + ":" + totScore3 + ("/" + speler4.charAt(0) + ":") + totScore4)
     basic.pause(200)
-    radio.sendString("" + speler4 + ": " + totScore4)
-    basic.pause(200)
-    radio.sendString("---------------------------------")
-    basic.pause(200)
-    if (gever == 1) {
-        radio.sendString("" + speler1 + " deelt")
-    } else if (gever == 2) {
-        radio.sendString("" + speler2 + " deelt")
-    } else if (gever == 3) {
-        radio.sendString("" + speler3 + " deelt")
-    } else if (gever == 4) {
-        radio.sendString("" + speler4 + " deelt")
-    }
 })
 touchbit.on(touchbit.TouchPad.d, touchbit.TouchEvent.released, function () {
     if (statusD == 0) {
@@ -232,20 +218,15 @@ for (let index = 0; index <= 3; index++) {
     basic.pause(200)
 }
 gever = randint(1, 4)
-radio.setGroup(255)
 basic.pause(200)
 if (gever == 1) {
     Kitronik_VIEWTEXT32.showString("" + speler1 + " deelt")
-    radio.sendString("" + speler1 + " deelt")
 } else if (gever == 2) {
     Kitronik_VIEWTEXT32.showString("" + speler2 + " deelt")
-    radio.sendString("" + speler2 + " deelt")
 } else if (gever == 3) {
     Kitronik_VIEWTEXT32.showString("" + speler3 + " deelt")
-    radio.sendString("" + speler3 + " deelt")
 } else if (gever == 4) {
     Kitronik_VIEWTEXT32.showString("" + speler4 + " deelt")
-    radio.sendString("" + speler4 + " deelt")
 }
 radio.setGroup(gever)
 basic.pause(200)
